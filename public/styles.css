@@ -1,0 +1,530 @@
+* {
+	font-family: 'Comic Sans MS', cursive;
+}
+body {
+	background: radial-gradient(ellipse at center, #3c6382 0%, #0a3d62 100%);
+	display: flex;
+	/* flex-direction: column; */
+	/* align-items: center; */
+}
+h1 {
+	margin: 40px;
+	color: #f8c291;
+	text-shadow: 0 0 5px #82ccdd;
+	font-size: 50px;
+	margin-left: 30%;
+}
+
+.pokemon-container{
+	margin-left: 30%;
+}
+
+button {
+	margin-bottom: 20px;
+    margin-right: 20px;
+	height: 25px;
+	width: 80px;
+	border: 0;
+    align-items: center;
+	border-radius: 5%;
+	background: #079992;
+	color: #fad390;
+	transition-duration: 0.3s;
+}
+
+button:hover {
+	background: #fad390;
+	color: #079992;
+}
+input {
+	height: 20px;
+	width: 20px;
+	background: none;
+	border: none;
+	text-align: center;
+	font-size: 15px;
+}
+.container {
+	margin-top: 50px;
+	height: 315px;
+	width: 315px;
+	border: 1px solid #0c2461;
+	background: #f1e5ce;
+	display: flex;
+	flex-direction: column;
+	transform: scale(1.3);
+	box-shadow: 0 0 5px #f8c291;
+}
+
+.line {
+	height: 35px;
+	width: 100%;
+	display: flex;
+}
+
+.line div {
+	border: 0.01em solid #82ccdd;
+	width: 35px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #295729;
+}
+
+.line:nth-child(3) div,
+.line:nth-child(6) div {
+	border-bottom-color: #0c2461;
+}
+
+.line div:nth-child(3),
+.line div:nth-child(6) {
+	border-right-color: #0c2461;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+
+  img{
+	height: 150px;
+	width: 150px;
+  }
+
+
+
+
+
+  .animate{
+	height: 100%;
+	/* max-height: 600px; */
+	width: 100%;
+	background-color: hsla(200,40%,30%,.4);
+	position: absolute;
+	background-image:		
+
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	/* animation: 1s para 1 linear; */
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	}
+.paused {
+  animation-play-state: paused;
+}
+
+.run-animation {
+	animation:1s para 1 linear;
+  }
+
+  .hide-pokemon{
+	visibility: hidden;
+  }
+
+
+
+
+   /*throw ball animation  */
+  @keyframes pikachu-disappear {
+	0% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0
+	}
+  }
+  
+  @keyframes throw-ball {
+	0% {
+	  top: 150%;
+	  left: 20%;
+	  transform: scale(0.5)
+	}
+	35% {
+	  top: 40%;
+	  left: 41%;
+	  transform: scale(1.2)
+	}
+	40% {
+	  top: 37%;
+	  left: 42%;
+	  transform: scale(1.3)
+	}
+	42.5% {
+	  top: 38.5%;
+	  left: 42.5%;
+	  transform: scale(1.3)
+	}
+	85% {
+	  top: 38.5%;
+	  left: 42.5%;
+	  transform: scale(1.3)
+	}
+	100% {
+	  top: 50%;
+	  left: 47.2%;
+	  transform: scale(1)
+	}
+  }
+  
+  @keyframes wiggle {
+	0% {
+	  transform: rotate(0);
+	}
+	10% {
+	  transform: rotate(-15deg);
+	}
+	20% {
+	  transform: rotate(15deg);
+	}
+	30% {
+	  transform: rotate(-15deg);
+	}
+	50% {
+	  transform: rotate(0);
+	}
+	100% {
+	  transform: rotate(0);
+	}
+  }
+  
+  @keyframes catch {
+	0% {
+	  background: rgba(0, 0, 0, 0.2);
+	}
+	100% {
+	  background: rgba(0, 0, 0, 0.7);
+	}
+  }
+  
+  @keyframes star1 {
+	0% {
+	  top: 0;
+	  left: 0;
+	  opacity: 1;
+	  transform: rotate(0);
+	}
+	40% {
+	  top: -70px;
+	  left: -30px;
+	  opacity: 1;
+	  transform: scale(1);
+	}
+	80% {
+	  top: -50px;
+	  left: -50px;
+	  opacity: 1;
+	  transform: rotate(-45deg)scale(1.2);
+	}
+	100% {
+	  top: -50px;
+	  left: -50px;
+	  opacity: 0;
+	  transform: rotate(-60deg) scale(1);
+	}
+  }
+  
+  @keyframes star2 {
+	0% {
+	  top: 0;
+	  opacity: 1;
+	}
+	40% {
+	  top: -90px;
+	  opacity: 1;
+	  transform: scale(1);
+	}
+	80% {
+	  top: -70px;
+	  opacity: 1;
+	  transform: scale(1.2);
+	}
+	100% {
+	  top: -70px;
+	  opacity: 0;
+	  transform: scale(1);
+	}
+  }
+  
+  @keyframes star3 {
+	0% {
+	  top: 0;
+	  opacity: 1;
+	  transform: rotate(0);
+	}
+	40% {
+	  top: -70px;
+	  left: calc(70% + 30px);
+	  opacity: 1;
+	  transform: scale(1);
+	}
+	80% {
+	  top: -50px;
+	  left: calc(70% + 50px);
+	  opacity: 1;
+	  transform: rotate(45deg) scale(1.2);
+	}
+	100% {
+	  top: -50px;
+	  left: calc(70% + 50px);
+	  opacity: 0;
+	  transform: rotate(60deg) scale(1);
+	}
+  }
+  
+  @keyframes successMessage {
+	from {
+	  opacity: 1;
+	  width: 0;
+	}
+	to {
+	  opacity: 1;
+	  width: 500px;
+	}
+  }
+  
+  @keyframes gotchaMessage {
+	from {
+	  opacity: 1;
+	  width: 0;
+	}
+	to {
+	  opacity: 1;
+	  width: 160px;
+	}
+  }
+  
+  @keyframes throwMessage {
+	from {
+	  opacity: 1;
+	  width: 0;
+	}
+	to {
+	  opacity: 1;
+	  width: 510px;
+	}
+  }
+  
+  
+  body {
+	overflow: hidden;
+  }
+  
+    /* .container {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	/* //background:red; */
+  /* } */ 
+  
+  .pikachu {
+	position: fixed;
+	width: 300px;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .textbox {
+	position: fixed;
+	width: 90%;
+  }
+  
+  .textbox-text {
+	margin-left: 5%;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: 5px;
+	opacity: 0;
+  }
+  
+  .throw {
+	/* @extend .textbox-text; */
+	width: 510px;
+  }
+  
+  .gotcha {
+	/* @extend .textbox-text; */
+	width: 160px;
+  }
+  
+  .success {
+	/* @extend .textbox-text; */
+	width: 450px;
+  }
+  
+  .textbox {
+	border: 5px solid black;
+	border-radius: 5px;
+	margin: 2% 5%;
+	height: 130px;
+  }
+  
+  a {
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+	position: fixed;
+	bottom: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	color:white;
+  }
+  
+  a:active,
+  a:hover,
+  a:visited {
+	color: red;
+  }
+  
+  .pokeball {
+	background-color: black;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: all 0.25s ease-in-out;
+	top: 150%;
+	left: 20%;
+	transform-origin: center bottom;
+  }
+  
+  .catch {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	z-index: 3;
+  }
+  
+  .pokeball:target {
+	/* //animation: wiggle 1s 3; */
+	animation: throw-ball 2s 1, wiggle 1s 3 2s;
+	animation-fill-mode: forwards;
+  }
+  
+  .pokeball:target .catch {
+	animation: catch 0.2s 1 steps(1, start);
+	animation-delay: 5.2s;
+	animation-fill-mode: forwards;
+  }
+  
+  .pokeball:target .star1 {
+	animation: star1 0.45s linear 1;
+	animation-delay: 5.2s;
+  }
+  
+  .pokeball:target .star2 {
+	animation: star2 0.45s linear 1;
+	animation-delay: 5.2s;
+  }
+  
+  .pokeball:target .star3 {
+	animation: star3 0.45s linear 1;
+	animation-delay: 5.2s;
+  }
+  
+  .pokeball:target .success {
+	animation: successMessage 0.48s linear 1;
+	animation-delay: 6.2s;
+  }
+  
+  .top {
+	background-color: red;
+	width: 90px;
+	height: 43px;
+	border-radius: 45px 45px 0 0;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .bottom {
+	background-color: white;
+	width: 90px;
+	height: 43px;
+	border-radius: 0 0 45px 45px;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .centre-black {
+	width: 40px;
+	height: 40px;
+	background: black;
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+  }
+  
+  .centre-white {
+	width: 30px;
+	height: 30px;
+	background: white;
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+  }
+  
+  .star {
+	z-index: 4;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+  }
+  
+  .star1 {
+	opacity: 0;
+	left: 0;
+  }
+  
+  .star2 {
+	opacity: 0;
+	left: 33%;
+  }
+  
+  .star3 {
+	opacity: 0;
+	left: 70%;
+  }
